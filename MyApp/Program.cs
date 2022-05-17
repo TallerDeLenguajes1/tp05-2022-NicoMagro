@@ -1,27 +1,34 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Ingrese un texto: ");
-string texto = Console.ReadLine();
-Console.WriteLine("Ingrese un numero: ");
-string numero = Console.ReadLine();
-Console.WriteLine("Ingrese otro numero: ");
-string numero1 = Console.ReadLine();
-int resultado = Int32.Parse(numero) + Convert.ToInt32(numero1);
-Console.WriteLine("Usted escribio " + texto + numero + numero1);
-Console.WriteLine("el resultado es: " + resultado);
-EscribeUnaLinea();
-Console.WriteLine("Hola Mundo!");
-Console.WriteLine("Usted escribio " + texto);
-int cuadrados = cuadrado(Convert.ToInt32(numero));
-Console.WriteLine("El cuadrado del numero 1 es: " + cuadrados);
+﻿//Construir un programa que permita invertir Número de N cifras.
+// Si el número es menor o igual a cero evitar esta conversión
 
+// Console.WriteLine("Ingrese un numero para invertirlo");
+// char[] array = Console.ReadLine().ToCharArray();
 
-int cuadrado(int a)
+// while (Convert.ToInt32(array) <= 0)
+// {
+//     Console.WriteLine("Numero no valido, ingrese un numero positivo");
+//     array = Console.ReadLine().ToCharArray();
+// }
+// Array.Reverse(array);
+
+// string n = new string(array);
+
+// Console.WriteLine(n);
+
+Console.Write("Ingrese un número: ");
+int numero = Convert.ToInt32(Console.ReadLine());
+
+while (numero <= 0)
 {
-    return a*a;
+    Console.WriteLine("Numero no valido, ingresar un numero positivo");
+    numero = Convert.ToInt32(Console.ReadLine());
 }
 
-void EscribeUnaLinea()
+var invertido = new string("");
+
+foreach (char c in Convert.ToString(numero))
 {
-    Console.WriteLine("Escribe una linea");
+    invertido = c + invertido;
 }
+
+Console.WriteLine("El numero invertido es: " + invertido);
