@@ -9,5 +9,19 @@ string numero1 = Console.ReadLine();
 int resultado = Int32.Parse(numero) + Convert.ToInt32(numero1);
 Console.WriteLine("Usted escribio " + texto + numero + numero1);
 Console.WriteLine("el resultado es: " + resultado);
+EscribeUnaLinea();
 Console.WriteLine("Hola Mundo!");
 Console.WriteLine("Usted escribio " + texto);
+int cuadrados = cuadrado(Convert.ToInt32(numero));
+Console.WriteLine("El cuadrado del numero 1 es: " + cuadrados);
+
+
+int cuadrado(int a)
+{
+    return a*a;
+}
+
+void EscribeUnaLinea()
+{
+    Console.WriteLine("Escribe una linea");
+}
