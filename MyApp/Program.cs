@@ -10,3 +10,4 @@ int resultado = Int32.Parse(numero) + Convert.ToInt32(numero1);
 Console.WriteLine("Usted escribio " + texto + numero + numero1);
 Console.WriteLine("el resultado es: " + resultado);
 Console.WriteLine("Hola Mundo!");
+Console.WriteLine("Usted escribio " + texto);
