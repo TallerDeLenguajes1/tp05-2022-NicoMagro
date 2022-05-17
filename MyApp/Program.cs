@@ -1,34 +1,60 @@
-﻿//Construir un programa que permita invertir Número de N cifras.
-// Si el número es menor o igual a cero evitar esta conversión
+﻿Console.WriteLine("Ingrese dos numeros");
+Console.WriteLine("Ingrese el primer numero: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ingrese el segundo numero: ");
+int n2 = Convert.ToInt32(Console.ReadLine());
 
-// Console.WriteLine("Ingrese un numero para invertirlo");
-// char[] array = Console.ReadLine().ToCharArray();
+Console.WriteLine("Que desea hacer?");
+Console.WriteLine("Presione 1 para realizar una suma");
+Console.WriteLine("Presione 2 para realizar una resta");
+Console.WriteLine("Presione 3 para realizar una multiplicacion");
+Console.WriteLine("Presione 4 para realizar una division");
 
-// while (Convert.ToInt32(array) <= 0)
-// {
-//     Console.WriteLine("Numero no valido, ingrese un numero positivo");
-//     array = Console.ReadLine().ToCharArray();
-// }
-// Array.Reverse(array);
-
-// string n = new string(array);
-
-// Console.WriteLine(n);
-
-Console.Write("Ingrese un número: ");
-int numero = Convert.ToInt32(Console.ReadLine());
-
-while (numero <= 0)
+Console.WriteLine("Ingrese una opcion: ");
+int operacion = Convert.ToInt32(Console.ReadLine());
+while (operacion <= 0 || operacion > 4)
 {
-    Console.WriteLine("Numero no valido, ingresar un numero positivo");
-    numero = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Ingrese una opcion correcta");
+    operacion = Convert.ToInt32(Console.ReadLine());
 }
 
-var invertido = new string("");
-
-foreach (char c in Convert.ToString(numero))
+int resultado;
+switch (operacion)
 {
-    invertido = c + invertido;
+    case 1:
+        resultado = sumar(n1, n2);
+        Console.WriteLine("El resultado de sumar ambos numeros es: " + resultado);
+    break;
+    case 2:
+        resultado = restar(n1, n2);
+        Console.WriteLine("El resultado de restar ambos numeros es: " + resultado);
+    break;
+    case 3:
+        resultado = multiplicar(n1, n2);
+        Console.WriteLine("El resultado de multiplicar ambos numeros es: " + resultado);
+    break;
+    case 4: 
+        resultado = dividir(n1, n2);
+        Console.WriteLine("El resultado de dividir ambos numeros es: " + resultado);
+    break;
 }
 
-Console.WriteLine("El numero invertido es: " + invertido);
+int sumar(int n1, int n2)
+{
+    return n1+n2;
+}
+
+int restar(int n1, int n2)
+{
+    return n1-n2;
+}
+
+int multiplicar(int n1, int n2)
+{
+    return n1*n2;
+}
+
+int dividir(int n1, int n2)
+{
+    return n1/n2;
+}
