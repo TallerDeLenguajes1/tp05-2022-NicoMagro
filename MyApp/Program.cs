@@ -73,3 +73,21 @@ int dividir(int n1, int n2)
 }
 
 //Console.WriteLine("Chau V1");
+Console.WriteLine("Ingrese un numero: ");
+double n = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Valor absoluto: {0}", Math.Abs(n));
+Console.WriteLine("Cuadrado: {0}", Math.Pow(n, 2));
+Console.WriteLine("Raiz cuadrada: {0}", Math.Sqrt(n));
+Console.WriteLine("Seno: {0}", Math.Sin(n));
+Console.WriteLine("Coseno: {0}", Math.Cos(n));
+Console.WriteLine("Parte entera de un tipo float: {0}", Math.ReciprocalEstimate(n));
+
+Console.WriteLine("A continuacion ingrese dos numeros");
+double n3 = Convert.ToDouble(Console.ReadLine());
+double n4 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Maximo: {0}", Math.Max(n3, n4));
+Console.WriteLine("Minimo: {0}", Math.Min(n3, n4));
+
+//Console.WriteLine("Chau V2");
