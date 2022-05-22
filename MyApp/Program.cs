@@ -1,27 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Ingrese un texto: ");
-string texto = Console.ReadLine();
-Console.WriteLine("Ingrese un numero: ");
-string numero = Console.ReadLine();
-Console.WriteLine("Ingrese otro numero: ");
-string numero1 = Console.ReadLine();
-int resultado = Int32.Parse(numero) + Convert.ToInt32(numero1);
-Console.WriteLine("Usted escribio " + texto + numero + numero1);
-Console.WriteLine("el resultado es: " + resultado);
-EscribeUnaLinea();
-Console.WriteLine("Hola Mundo!");
-Console.WriteLine("Usted escribio " + texto);
-int cuadrados = cuadrado(Convert.ToInt32(numero));
-Console.WriteLine("El cuadrado del numero 1 es: " + cuadrados);
-
-
-int cuadrado(int a)
+﻿Console.WriteLine("Ingrese una cadena");
+string cadena = Console.ReadLine();
+int longitud = 0;
+foreach (char c in cadena)
 {
-    return a*a;
+    longitud++;
 }
-
-void EscribeUnaLinea()
-{
-    Console.WriteLine("Escribe una linea");
-}
+Console.WriteLine("Longitud de la cadena: {0}", longitud);
+Console.WriteLine("Ingrese otra cadena");
+string cadena2 = Console.ReadLine();
+String cadena3 = cadena + " " + cadena2;
+Console.WriteLine("La cadena concatenada quedo: {0}", cadena3);
